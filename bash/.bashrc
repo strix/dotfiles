@@ -110,6 +110,10 @@ if [ -f ~/.profile ]; then
     . ~/.profile
 fi
 
+if [ -f ~/extend.bashrc ]; then
+    . ~/.extend.bashrc
+fi
+
 if [ -f ~/.extra.bashrc ]; then
     . ~/.extra.bashrc
 fi
