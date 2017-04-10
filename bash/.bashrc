@@ -110,8 +110,8 @@ if [ -f ~/.profile ]; then
     . ~/.profile
 fi
 
-if [ -f ~/.extend.bashrc ]; then
-    . ~/.extend.bashrc
+if [ -f ~/.extra.bashrc ]; then
+    . ~/.extra.bashrc
 fi
 
 # enable programmable completion features (you don't need to enable
