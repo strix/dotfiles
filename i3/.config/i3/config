@@ -189,7 +189,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec i3lock -c 000000
 
 exec google-chrome-stable
 exec atom
