@@ -110,6 +110,10 @@ if [ -f ~/.profile ]; then
     . ~/.profile
 fi
 
+if [ -f ~/.extend.bashrc ]; then
+    . ~/.extend.bashrc
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -121,7 +125,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "/home/branceboren/.gvm/scripts/gvm" ]] && source "/home/branceboren/.gvm/scripts/gvm"
-source <(kubectl completion bash)
