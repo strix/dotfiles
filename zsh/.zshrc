@@ -87,3 +87,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# npm global directory
+export PATH=~/.npm-global/bin:$PATH
