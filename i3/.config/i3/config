@@ -199,6 +199,7 @@ exec google-chrome-stable
 exec atom
 exec spotify
 
+exec_always pasystray
 exec_always /home/branceboren/.screenlayout/laptop-single.sh
 
 assign [class="Google-chrome"] $workspace2
