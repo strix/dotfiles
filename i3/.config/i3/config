@@ -176,7 +176,7 @@ bar {
 }
 
 # Start NetworkManager Applet
-exec --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec amixer set Master 2%+ unmute
