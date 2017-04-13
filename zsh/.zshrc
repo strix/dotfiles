@@ -90,3 +90,6 @@ fi
 
 # npm global directory
 export PATH=~/.npm-global/bin:$PATH
+
+# other env vars
+export EDITOR=vim
