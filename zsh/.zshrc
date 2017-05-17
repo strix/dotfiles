@@ -93,3 +93,6 @@ export PATH=~/.npm-global/bin:$PATH
 
 # other env vars
 export EDITOR=vim
+
+export GOPATH=$HOME/go
+export PATH=${GOPATH//://bin:}/bin:$PATH
