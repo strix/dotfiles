@@ -195,6 +195,9 @@ exec --no-startup-id xinput set-prop "MSFT0001:00 06CB:75BD Touchpad" "libinput 
 exec --no-startup-id xinput set-prop "MSFT0001:00 06CB:75BD Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "MSFT0001:00 06CB:75BD Touchpad" "libinput Click Method Enabled" 0, 1
 
+# Extra Mouse Button Bindings
+# bindsym --release --whole-window button10 exec --no-startup-id import /tmp/latest-screenshot.png
+
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
 # bindsym XF86AudioPause exec playerctl pause
