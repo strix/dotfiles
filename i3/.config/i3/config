@@ -195,6 +195,10 @@ exec --no-startup-id xinput set-prop "MSFT0001:00 06CB:75BD Touchpad" "libinput 
 exec --no-startup-id xinput set-prop "MSFT0001:00 06CB:75BD Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "MSFT0001:00 06CB:75BD Touchpad" "libinput Click Method Enabled" 0, 1
 
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Click Method Enabled" 0, 1
+
 # Extra Mouse Button Bindings
 # bindsym --release --whole-window button10 exec --no-startup-id import /tmp/latest-screenshot.png
 
