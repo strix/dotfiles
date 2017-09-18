@@ -21,6 +21,7 @@ alias wget='wget -c'
 alias refresh='source ~/.bashrc'
 alias genpass='date +%s | sha256sum | base64 | head -c 32 ; echo'
 alias dhupdate='cd /home/branceboren/workspace/devhumor-slack && node devhumor.js'
+alias gv='gvim --remote-silent'
 
 ## shortcut  for iptables and pass it via sudo#
 alias ipt='sudo /sbin/iptables'
