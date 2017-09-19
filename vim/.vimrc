@@ -24,18 +24,14 @@ call plug#begin('~/.vim/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'scrooloose/nerdcommenter'
+    Plug 'scrooloose/nerdtree'
 call plug#end()
 
 colo minimalist
 set guifont=Monospace\ Regular\ 13
 set guioptions-=T
 
-" tree view file explorer settings
-let g:netrw_banner = 0
-let g:netrw_browse_split = 3
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 25
-map <C-k> :Vex<CR>
+map <C-k> :NERDTreeToggle<CR>
 
 " CTRL-Tab is next tab
 noremap <C-Tab> :<C-U>tabnext<CR>
