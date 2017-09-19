@@ -32,6 +32,8 @@ colo minimalist
 set guifont=Monospace\ Regular\ 13
 set guioptions-=T
 
+set updatetime=250
+
 let g:taboo_tab_format = " %N - %f%m "
 map <C-k> :NERDTreeToggle<CR>
 
