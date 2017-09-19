@@ -25,12 +25,14 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
+    Plug 'gcmt/taboo'
 call plug#end()
 
 colo minimalist
 set guifont=Monospace\ Regular\ 13
 set guioptions-=T
 
+let g:taboo_tab_format = " %N - %f%m "
 map <C-k> :NERDTreeToggle<CR>
 
 " CTRL-Tab is next tab
