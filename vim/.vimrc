@@ -1,4 +1,5 @@
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent
+autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
 set number
 
 call plug#begin('~/.vim/plugged')
@@ -16,6 +17,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'mattn/emmet-vim'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 colo minimalist
