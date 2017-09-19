@@ -2,6 +2,11 @@ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
 set number
 
+let mapleader = ","
+nmap <C-_> <leader>c<Space>
+vmap <C-_> <leader>c<Space>
+runtime macros/matchit.vim
+
 call plug#begin('~/.vim/plugged')
     Plug 'dikiaap/minimalist'
     Plug 'ctrlpvim/ctrlp.vim'
@@ -18,6 +23,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'terryma/vim-multiple-cursors'
     Plug 'mattn/emmet-vim'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+    Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 colo minimalist
