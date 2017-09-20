@@ -41,10 +41,10 @@ set updatetime=250
 let g:taboo_tab_format = " %N - %f%m "
 map <C-k> :NERDTreeToggle<CR>
 
-" CTRL-Tab is next tab
-noremap <C-Tab> :<C-U>tabnew<CR>
-inoremap <C-Tab> <C-\><C-N>:tabnew<CR>
-cnoremap <C-Tab> <C-C>:tabnew<CR>
+" CTRL-T is new tab
+noremap <C-T> :<C-U>tabnew<CR>
+inoremap <C-T> <C-\><C-N>:tabnew<CR>
+cnoremap <C-T> <C-C>:tabnew<CR>
 " CTRL-Tab is next tab
 noremap <C-Tab> :<C-U>tabnext<CR>
 inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
