@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
-    Plug 'gcmt/taboo'
+    Plug 'gcmt/taboo.vim'
 call plug#end()
 
 colo minimalist
@@ -37,6 +37,10 @@ set updatetime=250
 let g:taboo_tab_format = " %N - %f%m "
 map <C-k> :NERDTreeToggle<CR>
 
+" CTRL-Tab is next tab
+noremap <C-Tab> :<C-U>tabnew<CR>
+inoremap <C-Tab> <C-\><C-N>:tabnew<CR>
+cnoremap <C-Tab> <C-C>:tabnew<CR>
 " CTRL-Tab is next tab
 noremap <C-Tab> :<C-U>tabnext<CR>
 inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
