@@ -26,9 +26,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
     Plug 'gcmt/taboo.vim'
+    Plug 'joshdick/onedark.vim'
 call plug#end()
 
-colo minimalist
+colo onedark
 set guifont=Monospace\ Regular\ 13
 set guioptions-=T
 
