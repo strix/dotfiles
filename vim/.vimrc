@@ -27,11 +27,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'gcmt/taboo.vim'
     Plug 'joshdick/onedark.vim'
+    Plug 'w0rp/ale'
 call plug#end()
 
 colo onedark
 set guifont=Monospace\ Regular\ 13
 set guioptions-=T
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\   'python': ['pycodestyle'],
+\}
 set guioptions-=m
 set guioptions-=r
 set guioptions-=L
