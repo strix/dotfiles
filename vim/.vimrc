@@ -32,6 +32,9 @@ call plug#end()
 colo onedark
 set guifont=Monospace\ Regular\ 13
 set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=L
 
 set updatetime=250
 
