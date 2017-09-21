@@ -31,7 +31,15 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 colo onedark
-set guifont=Monospace\ Regular\ 13
+
+if has('win32')
+    set guifont=Consolas:h12   " Win32.
+elseif has('gui_macvim')
+    set guifont=Menlo\ Regular:h14     " OSX.
+else
+    set guifont=Monospace\ Regular\ 13 "Linux.
+endif
+
 set guioptions-=T
 let g:ale_linters = {
 \   'javascript': ['standard'],
