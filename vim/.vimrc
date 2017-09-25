@@ -28,6 +28,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'gcmt/taboo.vim'
     Plug 'joshdick/onedark.vim'
     Plug 'w0rp/ale'
+    Plug 'Valloric/MatchTagAlways'
 call plug#end()
 
 colo onedark
