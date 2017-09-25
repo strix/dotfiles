@@ -11,6 +11,18 @@
 
 set $mod Mod4
 
+# Setting up keypad code variables because some desktop envs hijack the sym
+set $KP_1 87
+set $KP_2 88
+set $KP_3 89
+set $KP_4 83
+set $KP_5 84
+set $KP_6 85
+set $KP_7 79
+set $KP_8 80
+set $KP_9 81
+set $KP_0 90
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 12
@@ -180,10 +192,21 @@ bar {
 # Start NetworkManager Applet
 exec_always --no-startup-id nm-applet
 
+# set Numlock to on at login time
+exec --no-startup-id numlockx on
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec amixer set Master 2%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# external keyboard audio controls
+bindcode $mod+$KP_9 exec amixer set Master 2%+ unmute
+bindcode $mod+$KP_8 exec amixer set Master 2%- unmute
+bindcode $mod+$KP_7 exec amixer -q set Master toggle
+bindcode $mod+$KP_4 exec playerctl previous
+bindcode $mod+$KP_5 exec playerctl play-pause
+bindcode $mod+$KP_6 exec playerctl next
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
