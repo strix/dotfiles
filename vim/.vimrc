@@ -71,6 +71,8 @@ cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 " ctrlp settings
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = '/node_modules'
+let g:ctrlp_custom_ignore = '/deps'
+let g:ctrlp_custom_ignore = '/_build'
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
