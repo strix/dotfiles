@@ -1,5 +1,6 @@
 set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
+autocmd BufNewFile,BufRead *.apex set filetype=apex
 set number
 
 set incsearch
@@ -31,6 +32,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'w0rp/ale'
     Plug 'Valloric/MatchTagAlways'
+    Plug 'ejholmes/vim-forcedotcom'
 call plug#end()
 
 colo onedark
