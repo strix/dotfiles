@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'w0rp/ale'
     Plug 'Valloric/MatchTagAlways'
+    Plug 'ntpeters/vim-better-whitespace'
     Plug 'ejholmes/vim-forcedotcom'
 call plug#end()
 
