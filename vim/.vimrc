@@ -2,6 +2,8 @@ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
 set number
 
+set incsearch
+
 let mapleader = ","
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
