@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'posva/vim-vue'
     Plug 'mileszs/ack.vim'
     Plug 'elixir-lang/vim-elixir'
-    Plug 'Raimondi/delimitMate'
+    Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
     Plug 'pangloss/vim-javascript'
     Plug 'terryma/vim-multiple-cursors'
