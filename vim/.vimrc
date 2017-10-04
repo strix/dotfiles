@@ -60,6 +60,13 @@ set updatetime=250
 let g:taboo_tab_format = " %N - %f%m "
 map <C-k> :NERDTreeToggle<CR>
 
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+
+let g:NERDCustomDelimiters = {
+  \ 'python': { 'left': '#', 'right': '' }
+\}
+
 " CTRL-T is new tab
 noremap <C-T> :<C-U>tabnew<CR>
 inoremap <C-T> <C-\><C-N>:tabnew<CR>
