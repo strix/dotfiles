@@ -4,6 +4,7 @@ autocmd BufNewFile,BufRead *.apex set filetype=apex
 set number
 
 set incsearch
+set ic
 
 let mapleader = ","
 nmap <C-_> <leader>c<Space>
