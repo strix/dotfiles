@@ -6,6 +6,8 @@ set number
 set incsearch
 set ic
 
+set clipboard=unnamedplus
+
 let mapleader = ","
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
