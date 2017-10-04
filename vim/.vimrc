@@ -37,7 +37,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/MatchTagAlways'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'ejholmes/vim-forcedotcom'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 call plug#end()
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 colo onedark
 
