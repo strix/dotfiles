@@ -44,9 +44,19 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets'
 call plug#end()
 
+let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'MySnips']
+let g:UltiSnipsSnippetsDir='~/.vim/MySnips'
+autocmd FileType python UltiSnipsAddFiletypes django
+
+let g:ultisnips_javascript = {
+  \ 'keyword-spacing': 'always',
+  \ 'semi': 'never',
+  \ 'space-before-function-paren': 'always',
+\ }
 
 colo onedark
 
