@@ -8,6 +8,9 @@ set ic
 
 set clipboard=unnamedplus
 
+set wildmenu
+set wildmode=full
+
 let mapleader = ","
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
