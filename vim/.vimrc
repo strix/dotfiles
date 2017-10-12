@@ -8,6 +8,12 @@ set ic
 
 set clipboard=unnamedplus
 
+" Make vims shell interactive
+set shellcmdflag=-ic
+
+" automatically read new file changes
+set autoread
+
 set wildmenu
 set wildmode=full
 
