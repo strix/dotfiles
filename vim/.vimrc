@@ -114,6 +114,8 @@ noremap <C-S-Tab> :<C-U>tabprevious<CR>
 inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
 cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 
+nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
+
 " ctrlp settings
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = '/node_modules'
