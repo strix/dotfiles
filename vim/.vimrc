@@ -48,6 +48,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'ejholmes/vim-forcedotcom'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+    Plug 'airblade/vim-rooter'
 call plug#end()
 
 let g:UltiSnipsEditSplit='vertical'
@@ -94,6 +95,11 @@ let g:NERDCompactSexyComs = 1
 let g:NERDCustomDelimiters = {
   \ 'python': { 'left': '#', 'right': '' }
 \}
+
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_use_lcd = 1
+let g:rooter_resolve_links = 1
+let g:rooter_patterns = ['package.json', '.git/']
 
 " CTRL-T is new tab
 noremap <C-T> :<C-U>tabnew<CR>
