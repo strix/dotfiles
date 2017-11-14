@@ -6,7 +6,7 @@ set number
 set incsearch
 set ic
 
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 " Make vims shell interactive
 set shellcmdflag=-ic
