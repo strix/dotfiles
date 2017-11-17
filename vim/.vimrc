@@ -115,6 +115,8 @@ inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
 cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 
 nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
+" Select text that was last pasted
+nnoremap gp `[v`]
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|deps)|(\.(swp|ico|git|svn))$'
