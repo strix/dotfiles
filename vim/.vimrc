@@ -49,6 +49,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'airblade/vim-rooter'
+    Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:UltiSnipsEditSplit='vertical'
@@ -88,6 +89,7 @@ set updatetime=250
 
 let g:taboo_tab_format = " %N - %f%m "
 map <C-k> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen = 1
 
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
@@ -119,7 +121,7 @@ nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 nnoremap gp `[v`]
 
 " ctrlp settings
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|deps)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|deps|venv*)|(\.(swp|ico|git|svn))$'
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
