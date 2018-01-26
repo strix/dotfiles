@@ -109,4 +109,4 @@ export PATH=${GOPATH//://bin:}/bin:$PATH
 # virtualenvwrapper stuffs
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/workspace
-source /usr/bin/virtualenvwrapper.sh
+source "$(command -v virtualenvwrapper.sh)"
