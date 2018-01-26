@@ -1,5 +1,3 @@
-alias djpl='cd ~/workspace/printerlogic-com && source venv-printerlogic/bin/activate'
-alias pl='cd ~/workspace/printerlogic-com'
 alias runs='python manage.py runserver 127.0.0.1:8000'
 alias runss='python manage.py runserver_plus 127.0.0.1:8000 --cert cert'
 alias collstat='python manage.py collectstatic -l'
