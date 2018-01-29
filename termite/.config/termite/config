@@ -1,6 +1,6 @@
 [options]
 font = Monospace 13
-# font = Droid Sans Mono 14
+# font = Droid Sans Mono 13
 
 [colors]
 # Base16 IR Black
@@ -27,9 +27,9 @@ color9  = #ff6c60
 color2  = #a8ff60
 color10 = #a8ff60
 
-# Yellow
-color3  = #ffffb6
-color11 = #ffffb6
+# Orange
+color3  = #ffa500
+color11 = #ffa500
 
 # Blue
 color4  = #96cbfe
