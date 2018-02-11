@@ -1,7 +1,11 @@
 set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent splitright splitbelow showcmd number
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
 autocmd BufNewFile,BufRead *.apex set filetype=apex
-set number
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 set incsearch
 set ic
@@ -88,7 +92,7 @@ set guioptions-=L
 set updatetime=250
 
 let g:taboo_tab_format = " %N - %f%m "
-map <C-k> :NERDTreeToggle<CR>
+map <leader>k :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 
 let g:NERDSpaceDelims = 1
