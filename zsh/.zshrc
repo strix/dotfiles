@@ -1,15 +1,19 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export EDITOR=vim
+
 # Path to your oh-my-zsh installation.
 case `uname` in
   Darwin)
     # commands for OS X go here
     export ZSH=/Users/branceboren/.oh-my-zsh
+    export EDITOR=mvim
   ;;
   Linux)
     # commands for Linux go here
     export ZSH=/home/branceboren/.oh-my-zsh
+    export EDITOR=gvim
   ;;
 esac
 
@@ -101,8 +105,6 @@ fi
 export PATH=~/.npm-global/bin:$PATH
 
 # other env vars
-export EDITOR=vim
-
 export GOPATH=$HOME/go
 export PATH=${GOPATH//://bin:}/bin:$PATH
 
