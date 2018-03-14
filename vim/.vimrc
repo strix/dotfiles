@@ -2,6 +2,12 @@ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent splitrigh
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
 autocmd BufNewFile,BufRead *.apex set filetype=apex
 
+" Turn off any error sounds or flashes
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
