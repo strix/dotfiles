@@ -14,6 +14,9 @@ case `uname` in
     # commands for Linux go here
     export ZSH=/home/branceboren/.oh-my-zsh
     export EDITOR=gvim
+    if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+      source /etc/profile.d/vte.sh
+    fi
   ;;
 esac
 
