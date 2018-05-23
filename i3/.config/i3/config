@@ -120,6 +120,13 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10 "
 
+# display output variables
+set $monitorLaptop "eDP1"
+set $monitorLeft "HDMI1"
+set $monitorMiddle "HDMI2"
+set $monitorRight "DVI-I-1-1"
+set $monitorTop "DVI-I-2-2"
+
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
@@ -243,9 +250,17 @@ exec spotify
 
 exec_always pasystray
 
-exec_always /home/branceboren/.screenlayout/laptop-single.sh
+# exec_always /home/branceboren/.screenlayout/laptop-single.sh
 # exec_always /home/branceboren/.screenlayout/work-1.sh
 
 assign [class="Google-chrome"] $workspace2
 assign [class="Atom"] $workspace3
 assign [class="Spotify"] $workspace10
+
+workspace $workspace1 output $monitorRight
+workspace $workspace2 output $monitorLeft
+workspace $workspace3 output $monitorMiddle
+workspace $workspace5 output $monitorTop
+workspace $workspace6 output $monitorTop
+workspace $workspace7 output $monitorLaptop
+workspace $workspace10 output $monitorLaptop
