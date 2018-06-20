@@ -58,6 +58,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'airblade/vim-rooter'
     Plug 'ap/vim-css-color'
+    Plug 'yuttie/comfortable-motion.vim'
 call plug#end()
 
 let g:UltiSnipsEditSplit='vertical'
