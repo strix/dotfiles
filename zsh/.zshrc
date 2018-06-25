@@ -100,6 +100,9 @@ if [ -f ~/.zsh_aliases ]; then
 	. ~/.zsh_aliases
 fi
 
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
