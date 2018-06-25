@@ -20,6 +20,12 @@ nnoremap <C-H> <C-W><C-H>
 set incsearch
 set ic
 
+" change cursor between ibeam for insert and block for normal
+if &term == 'xterm-256color' || &term == 'screen-256color'
+  let &t_SI = "\<Esc>[5 q"
+  let &t_EI = "\<Esc>[1 q"
+endif
+
 set clipboard^=unnamed,unnamedplus
 
 " Make vims shell interactive
