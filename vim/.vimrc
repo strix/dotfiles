@@ -19,6 +19,7 @@ nnoremap <C-H> <C-W><C-H>
 
 set incsearch
 set ic
+set timeoutlen=1000 ttimeoutlen=0
 
 " change cursor between ibeam for insert and block for normal
 if &term == 'xterm-256color' || &term == 'screen-256color'
