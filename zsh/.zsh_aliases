@@ -58,6 +58,14 @@ function songdl {
   fi
 }
 
+function twitch {
+  if [ -z "$1" ]; then
+    echo "Usage: twitch {channel name}"
+  else
+    streamlink -p "vlc --network-caching=5000" https://twitch.tv/$1 best &!
+  fi
+}
+
 function plrsync {
   if [ -z "$1" ] && [ -z "$2" ]; then
     # display usage if both parameters not given
