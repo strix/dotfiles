@@ -30,7 +30,7 @@ endif
 set clipboard^=unnamed,unnamedplus
 
 " Make vims shell interactive
-set shellcmdflag=-ic
+" set shellcmdflag=-ic
 
 " automatically read new file changes
 set autoread
