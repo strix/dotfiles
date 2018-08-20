@@ -4,15 +4,14 @@
 export EDITOR=vim
 
 # Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
 case `uname` in
   Darwin)
     # commands for OS X go here
-    export ZSH=/Users/branceboren/.oh-my-zsh
     export EDITOR=mvim
   ;;
   Linux)
     # commands for Linux go here
-    export ZSH=/home/branceboren/.oh-my-zsh
     export EDITOR=gvim
     if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
       source /etc/profile.d/vte.sh
