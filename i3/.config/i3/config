@@ -121,7 +121,7 @@ set $workspace9 "9"
 set $workspace10 "10 "
 
 # display output variables
-set $monitorLaptop "eDP1"
+set $monitorLaptop "eDP-1"
 set $monitorLeft "HDMI1"
 set $monitorMiddle "HDMI2"
 set $monitorRight "DVI-I-1-1"
