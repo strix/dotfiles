@@ -27,6 +27,8 @@ if &term == 'xterm-256color' || &term == 'screen-256color'
   let &t_EI = "\<Esc>[1 q"
 endif
 
+let &t_ut=''
+
 set clipboard^=unnamed,unnamedplus
 
 " Make vims shell interactive
