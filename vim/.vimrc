@@ -21,6 +21,12 @@ set incsearch
 set ic
 set timeoutlen=1000 ttimeoutlen=0
 
+" copy relative filepath from project root of file
+noremap <silent> <F3> :let @+=expand("%")<CR>
+
+" copy root filepath from project root of file
+noremap <silent> <F4> :let @+=expand("%:p")<CR>
+
 " change cursor between ibeam for insert and block for normal
 if &term == 'xterm-256color' || &term == 'screen-256color'
   let &t_SI = "\<Esc>[5 q"
