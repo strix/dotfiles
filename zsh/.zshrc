@@ -109,6 +109,10 @@ stty -ixon
 # npm global directory
 export PATH=~/.npm-global/bin:$PATH
 
+# n directory
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
+
 # other env vars
 export GOPATH=$HOME/go
 export PATH=${GOPATH//://bin:}/bin:$PATH
