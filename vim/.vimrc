@@ -155,7 +155,7 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
   nmap <C-f> :Ack<space>
 endif
