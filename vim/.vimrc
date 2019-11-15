@@ -74,6 +74,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/MatchTagAlways'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'sheerun/vim-polyglot'
+    Plug 'fatih/vim-go'
     Plug 'ejholmes/vim-forcedotcom'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
