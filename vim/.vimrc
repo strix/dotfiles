@@ -153,6 +153,17 @@ nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 " Select text that was last pasted
 nnoremap gp `[v`]
 
+" window
+nmap <leader>swl :topleft  vnew<CR>
+nmap <leader>swh :botright vnew<CR>
+nmap <leader>swk :topleft  new<CR>
+nmap <leader>swj :botright new<CR>
+" buffer
+nmap <leader>sl :leftabove  vnew<CR>
+nmap <leader>sh :rightbelow vnew<CR>
+nmap <leader>sk :leftabove  new<CR>
+nmap <leader>sj :rightbelow new<CR>
+
 " let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|deps|venv*)|(\.(swp|ico|git|svn))$'
 nnoremap <C-p> :FZF<Cr>
 let g:fzf_action = {
