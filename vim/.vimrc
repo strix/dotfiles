@@ -53,9 +53,9 @@ runtime macros/matchit.vim
 
 call plug#begin('~/.vim/plugged')
     Plug 'dikiaap/minimalist'
-    Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
+    Plug 'junegunn/fzf.vim'
     Plug 'vim-scripts/xptemplate'
     Plug 'severin-lemaignan/vim-minimap'
     Plug 'mileszs/ack.vim'
@@ -148,8 +148,12 @@ nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 " Select text that was last pasted
 nnoremap gp `[v`]
 
-" ctrlp settings
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|deps|venv*)|(\.(swp|ico|git|svn))$'
+" let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|deps|venv*)|(\.(swp|ico|git|svn))$'
+nnoremap <C-p> :FZF<Cr>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
