@@ -124,3 +124,6 @@ source "$(command -v virtualenvwrapper.sh)"
 
 # fzf stuffs
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!dist/*" --glob "!build/*" --glob "!venv/*"'
+
+# rust stuffs
+export PATH=$HOME/.cargo/bin:$PATH
