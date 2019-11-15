@@ -63,7 +63,15 @@ function twitch {
   if [ -z "$1" ]; then
     echo "Usage: twitch {channel name}"
   else
-    streamlink -p "vlc --network-caching=5000" https://twitch.tv/$1 best &!
+    streamlink -p mpv https://twitch.tv/$1 best &!
+  fi
+}
+
+function mixer {
+  if [ -z "$1" ]; then
+    echo "Usage: mixer {channel name}"
+  else
+    streamlink -p mpv https://mixer.com/$1 best &!
   fi
 }
 
