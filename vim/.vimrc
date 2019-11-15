@@ -82,6 +82,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'ap/vim-css-color'
     Plug 'yuttie/comfortable-motion.vim'
     Plug 'mhinz/vim-startify'
+    Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
 let g:UltiSnipsEditSplit='vertical'
