@@ -56,6 +56,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'dikiaap/minimalist'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
+    Plug 'junegunn/gv.vim'
     Plug 'junegunn/fzf.vim'
     Plug 'vim-scripts/xptemplate'
     Plug 'severin-lemaignan/vim-minimap'
