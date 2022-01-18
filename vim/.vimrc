@@ -180,14 +180,18 @@ nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 " Select text that was last pasted
 nnoremap gp `[v`]
 
+" Mapping for paste most recent yank
+nnoremap <leader>p "0p
+vnoremap <leader>p "0p
+
 " window
 nmap <leader>swl :topleft  vnew<CR>
 nmap <leader>swh :botright vnew<CR>
 nmap <leader>swk :topleft  new<CR>
 nmap <leader>swj :botright new<CR>
 " buffer
-nmap <leader>sl :leftabove  vnew<CR>
-nmap <leader>sh :rightbelow vnew<CR>
+nmap <leader>sl :rightbelow  vnew<CR>
+nmap <leader>sh :leftabove vnew<CR>
 nmap <leader>sk :leftabove  new<CR>
 nmap <leader>sj :rightbelow new<CR>
 
@@ -227,6 +231,15 @@ let g:prettier#autoformat_config_present = 1
 let g:prettier#config#config_precedence = 'prefer-file'
 " let g:prettier#config#config_precedence = 'file-override'
 nnoremap <Leader>y <Plug>(Prettier)
+
+" TODO test this out for applying macros only if they work across a visual
+" selection
+" xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+" function! ExecuteMacroOverVisualRange()
+  " echo "@".getcmdline()
+  " execute ":'<,'>normal @".nr2char(getchar())
+" endfunction
 
 " startify settings
 function! s:filter_header(lines) abort
