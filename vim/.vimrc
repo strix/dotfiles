@@ -64,27 +64,31 @@ vmap _ <leader>c<Space>
 runtime macros/matchit.vim
 
 call plug#begin('~/.vim/plugged')
+    Plug 'Asheq/close-buffers.vim'
     Plug 'dikiaap/minimalist'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'junegunn/gv.vim'
     Plug 'junegunn/fzf.vim'
+    " Plug 'junegunn/vim-emoji'
     Plug 'vim-scripts/xptemplate'
-    Plug 'severin-lemaignan/vim-minimap'
     Plug 'mileszs/ack.vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
-    Plug 'terryma/vim-multiple-cursors'
+    " Plug 'terryma/vim-multiple-cursors'
+    " Plug 'tpope/vim-repeat' " TODO: configure (https://github.com/tpope/vim-repeat)
     Plug 'mattn/emmet-vim'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
     Plug 'gcmt/taboo.vim'
+    " Plug 'ipod825/taboverflow.vim' " if using terminal vim(?) (https://github.com/ipod825/taboverflow.vim)
     Plug 'joshdick/onedark.vim'
     Plug 'w0rp/ale'
     Plug 'Valloric/MatchTagAlways'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'sheerun/vim-polyglot'
+    Plug 'pantharshit00/vim-prisma'
     Plug 'fatih/vim-go'
     Plug 'ejholmes/vim-forcedotcom'
     Plug 'SirVer/ultisnips'
@@ -94,6 +98,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'yuttie/comfortable-motion.vim'
     Plug 'mhinz/vim-startify'
     Plug 'wesQ3/vim-windowswap'
+    Plug 'tpope/vim-abolish'
+    Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
 let g:UltiSnipsEditSplit='vertical'
