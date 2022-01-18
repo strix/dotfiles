@@ -1,3 +1,4 @@
+alias open='xdg-open &>/dev/null &'
 alias runs='python manage.py runserver 127.0.0.1:8000'
 alias runss='python manage.py runserver_plus 127.0.0.1:8000 --cert cert'
 alias collstat='python manage.py collectstatic -l'
@@ -32,6 +33,8 @@ alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
 alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
 alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
 alias firewall=iptlist
+
+alias icat="kitty +kitten icat"
 
 function largefiles {
   if [ -z "$1" ]; then
@@ -84,6 +87,46 @@ function plrsync {
   fi
 }
 
+function setdb {
+  if [ -z "$1" ]; then
+    echo "setdb <db name>"
+  else
+    source $HOME/.config/mssqlcli/dbs/$1.sh
+  fi
+}
+
+function podexec {
+  kubectl get pods -o name | fzf --bind "ctrl-a:toggle-all" -m | xargs -I{} kubectl exec {} -- $@
+}
+
+function parpodexec () {
+  kubectl get pods -o name | fzf --bind "ctrl-a:toggle-all" -m | xargs -P 10 -I{} kubectl exec {} -- $@
+}
+
+function yt-start () {
+  screen -S yt -c ~/Videos/yt-playlist/playlist-dl.screen
+}
+function yt-check () {
+  screen -r -S yt
+}
+
+# function testthis () {
+  # local p=${p:-10}
+
+  # while [ $# -gt 0 ]; do
+    # if [[ $1 == *"-"* ]]; then
+      # param="${1/-/}"
+      # declare $param="$2"
+      # echo $1 $2
+    # fi
+    # shift
+  # done
+  # echo $p
+  # echo $@
+
+  # kubectl get pods -o name | fzf --bind "ctrl-a:toggle-all" -m | xargs -P $p -I{} kubectl exec {} -- $@
+# }
+
 # GIT ALIASES
 alias g='git status'
 alias gu='git status -uno'
@@ -113,4 +156,57 @@ function gitpullall {
   for branch in `git branch -a | grep remotes | grep -v HEAD | grep -v master`; do
     git branch --track ${branch##*/} $branch
   done
+}
+
+# git log show with fzf
+gli () {
+
+  # param validation
+  if [[ ! `git log -n 1 $@ | head -n 1` ]] ;then
+    return
+  fi
+
+  # filter by file string
+  local filter
+  # param existed, git log for file if existed
+  if [ -n $@ ] && [ -f $@ ]; then
+    filter="-- $@"
+  fi
+
+  # git command
+  local gitlog=(
+    git log
+    --graph --color=always
+    --abbrev=7
+    --format='%C(auto)%h %an %C(blue)%s %C(yellow)%cr'
+    $@
+  )
+
+  # fzf command
+  local fzf=(
+    fzf
+    --ansi --no-sort --reverse --tiebreak=index
+    --preview "f() { set -- \$(echo -- \$@ | grep -o '[a-f0-9]\{7\}'); [ \$# -eq 0 ] || git show --color=always \$1 $filter; }; f {}"
+    --bind "j:down,k:up,ctrl-j:preview-down,ctrl-k:preview-up,ctrl-f:preview-page-down,ctrl-b:preview-page-up,ctrl-q:abort,ctrl-m:execute:
+                (grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % $filter | less -R') << 'FZF-EOF'
+                {}
+                FZF-EOF"
+   --preview-window=right:60%
+  )
+
+  # piping them
+  $gitlog | $fzf
+}
+
+# git stash show with fzf
+gls () {
+  git stash list --color=always --format="%C(yellow)%C(bold)%gd%C(reset) %s %C(black)%C(bold)%cr"  | \
+   fzf --ansi --no-sort --reverse --tiebreak=index --preview \
+   'f() { set -- $(echo -- "$@" | grep -o "stash@{[0-9]\+}"); [ $# -eq 0 ] || git stash show -p --color=always $1 ; }; f {}' \
+   --bind "j:down,k:up,ctrl-j:preview-down,ctrl-k:preview-up,ctrl-f:preview-page-down,ctrl-b:preview-page-up,ctrl-q:abort,ctrl-m:execute:
+                (grep -o 'stash@{[0-9]\+}' | head -1 |
+                xargs -I % sh -c 'git stash show -p --color=always % | less -R') << 'FZF-EOF'
+                {}
+FZF-EOF" --preview-window=right:60%
 }
