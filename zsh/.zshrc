@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export EDITOR=vim
+# export EDITOR=vim
+export EDITOR=nvim
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -12,7 +13,7 @@ case `uname` in
   ;;
   Linux)
     # commands for Linux go here
-    export EDITOR=gvim
+    # export EDITOR=gvim
     if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
       source /etc/profile.d/vte.sh
     fi
