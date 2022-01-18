@@ -31,6 +31,10 @@ noremap <silent> <F3> :let @+=expand("%")<CR>
 
 " copy root filepath from project root of file
 noremap <silent> <F4> :let @+=expand("%:p")<CR>
+" copy file name to system clipboard
+" nnoremap <leader>ct :let @+=expand("%:t")<CR>
+" copy directory name to system clipboard
+" nnoremap <leader>ch :let @+=expand("%:p:h")<CR>
 
 " change cursor between ibeam for insert and block for normal
 if &term == 'xterm-256color' || &term == 'screen-256color'
