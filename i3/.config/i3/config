@@ -261,13 +261,17 @@ assign [class="vlc"] $workspace7
 assign [class="chatterino"] $workspace7
 assign [class="spotify"] $workspace10
 
+# feh --bg-fill ~/Pictures/Wallpapers/RWBY/Ruby.png --bg-fill ~/Pictures/Wallpapers/RWBY/rwby.png --bg-fill ~/Pictures/Wallpapers/RWBY/Blake.png --bg-fill ~/Pictures/Wallpapers/RWBY/Yang.png --bg-fill ~/Pictures/Wallpapers/RWBY/Weiss.png
+# feh --bg-fill ~/Pictures/Wallpapers/fork_bomb.jpg
+exec ~/.fehbg
+
 exec google-chrome-stable
 exec spotify
 
-exec_always pasystray
+exec pasystray
 
-# exec_always /home/branceboren/.screenlayout/laptop-single.sh
-# exec_always /home/branceboren/.screenlayout/work-1.sh
+# exec_always /home/strix/.screenlayout/laptop-single.sh
+# exec_always /home/strix/.screenlayout/displaylink.sh
 
 workspace $workspace1 output $monitorRight
 workspace $workspace2 output $monitorLeft
