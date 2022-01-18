@@ -3,7 +3,9 @@ set showbreak=↪
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
 autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufRead,BufNewFile *.blade.php set filetype=blade
 autocmd BufNewFile,BufRead *.apex set filetype=apex
+filetype plugin on
 
 " Turn off any error sounds or flashes
 set noerrorbells visualbell t_vb=
