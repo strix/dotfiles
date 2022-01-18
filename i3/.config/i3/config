@@ -210,6 +210,9 @@ exec_always --no-startup-id nm-applet
 # set Numlock to on at login time
 exec --no-startup-id numlockx on
 
+# set keyboard repeat rate
+# exec --no-startup-id xset r rate 300 30
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec amixer set Master 2%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 2%- unmute
