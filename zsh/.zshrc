@@ -151,3 +151,11 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 
 # rust stuffs
 export PATH=$HOME/.cargo/bin:$PATH
+
+# lua stuffs
+export LUA_PATH='/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib/lua/5.4/?.lua;/usr/lib/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/strix/.luarocks/share/lua/5.4/?.lua;/home/strix/.luarocks/share/lua/5.4/?/init.lua'
+export LUA_CPATH='/usr/lib/lua/5.4/?.so;/usr/lib/lua/5.4/loadall.so;./?.so;/home/strix/.luarocks/lib/lua/5.4/?.so'
+export PATH=$HOME/.luarocks/bin:$PATH
+
+# mssql-cli telemetry opt out
+export MSSQL_CLI_TELEMETRY_OPTOUT=True
