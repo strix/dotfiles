@@ -11,7 +11,7 @@ line=`gpaste-client --oneline | \
 exit_code=$?
 
 index=`echo $line | cut -d ':' -f1`
-if ! [[ $index =~ ^[0-9]+$ ]]; then
+if ! [[ $index =~ ^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$ ]]; then
   exit 0
 fi
 
