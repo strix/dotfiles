@@ -148,10 +148,20 @@ let g:NERDCustomDelimiters = {
   \ 'python': { 'left': '#', 'right': '' }
 \}
 
+let g:NERDCustomDelimiters = {
+  \ 'vue': { 'leftAlt': '<!--', 'rightAlt': '-->', 'left': '//', 'right': '' }
+\}
+
+
+let g:python_highlight_all = 1
+
 let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_use_lcd = 1
 let g:rooter_resolve_links = 1
 let g:rooter_patterns = ['package.json', '.git/']
+
+" let g:ycm_auto_hover = ''
+" nmap <leader>Y <plug>(YCMHover)
 
 " CTRL-T is new tab
 noremap <C-T> :<C-U>tabnew<CR>
@@ -181,8 +191,25 @@ nmap <leader>sh :rightbelow vnew<CR>
 nmap <leader>sk :leftabove  new<CR>
 nmap <leader>sj :rightbelow new<CR>
 
+
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
+let g:fzf_buffers_jump = 1
 " let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build|deps|venv*)|(\.(swp|ico|git|svn))$'
-nnoremap <C-p> :FZF<Cr>
+" FZF
+" nnoremap <C-p> :FZF<Cr>
+nnoremap <leader>/ :Rg<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>hi :History<CR>
+nnoremap <leader>coc :Commits<CR>
+nnoremap <leader>cob :BCommits<CR>
+nnoremap <leader>t :Filetypes<CR>
+" NOTE: to select text in these popup windows, use <CTRL-\><CTRL-n> and `i` to
+" return
+tnoremap <C-i> <C-w>"+
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
@@ -190,8 +217,16 @@ let g:fzf_action = {
 
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
-  nmap <C-f> :Ack<space>
+  nnoremap <leader>a :Ack<space>
 endif
+
+let g:prettier#autoformat = 1
+let g:prettier#exec_cmd_async = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat_config_present = 1
+let g:prettier#config#config_precedence = 'prefer-file'
+" let g:prettier#config#config_precedence = 'file-override'
+nnoremap <Leader>y <Plug>(Prettier)
 
 " startify settings
 function! s:filter_header(lines) abort
