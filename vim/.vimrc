@@ -56,9 +56,11 @@ set autoread
 set wildmenu
 set wildmode=full
 
-let mapleader = ","
-nmap <C-_> <leader>c<Space>
-vmap <C-_> <leader>c<Space>
+" remove any previous bind to space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+nmap _ <leader>c<Space>
+vmap _ <leader>c<Space>
 runtime macros/matchit.vim
 
 call plug#begin('~/.vim/plugged')
