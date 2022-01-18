@@ -225,9 +225,9 @@ bindcode $mod+$KP_7 exec amixer -q set Master toggle
 bindcode $mod+$KP_4 exec playerctl previous
 bindcode $mod+$KP_5 exec playerctl play-pause
 bindcode $mod+$KP_6 exec playerctl next
-bindsym XF86LaunchA exec playerctl previous
-bindsym XF86Tools exec playerctl play-pause
-bindsym XF86Explorer exec playerctl next
+bindsym $mod+bracketleft exec playerctl previous
+bindsym $mod+backslash exec playerctl play-pause
+bindsym $mod+bracketright exec playerctl next
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
