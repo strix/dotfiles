@@ -1,0 +1,8 @@
+snippet runtime
+$time_start = microtime(true);
+$1
+$time_end = microtime(true);
+$execution_time = ($time_end - $time_start);
+print_r('Total Execution Time: ' . $execution_time . ' seconds');
+// if you get weird results, use number_format((float) $execution_time, 10)
+endsnippet
