@@ -1,1 +1,3 @@
 layout save default
+escape ^||
+defscrollback 5000
